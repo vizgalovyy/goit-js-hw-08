@@ -93,6 +93,6 @@ gallery.addEventListener('click', event => {
   if (targetNode.nodeName !== 'IMG') {
     return;
   }
-  const largeImageURL = targetNode.dataset.source;
+  const largeImageURL = targetNode.getAttribute('data-source');
   console.log(largeImageURL);
 });
