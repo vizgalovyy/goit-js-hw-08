@@ -94,5 +94,11 @@ gallery.addEventListener('click', event => {
     return;
   }
   const largeImageURL = targetNode.getAttribute('data-source');
-  console.log(largeImageURL);
+  basicLightbox
+    .create(
+      `
+		<img alt=${targetNode.alt} src=${largeImageURL}>
+	`
+    )
+    .show();
 });
